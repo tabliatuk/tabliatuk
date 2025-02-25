@@ -1,7 +1,7 @@
 {
     "name": " طبليتك",
     "short_name": "طبليتك",
-    "start_url": "/index.html",
+    "start_url": "/tabliatuk",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
