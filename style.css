@@ -1,0 +1,329 @@
+/* تنسيق صفحة الويب */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding-bottom: 80px; /* المسافة المطلوبة لظهور الفوتر بشكل مناسب */
+}
+/* تنسيق الـ Header */
+header {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* تدرج لوني جذاب */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #fff; /* إضافة حد سفلي لتحديد الـ header */
+}
+header .logo h1 {
+    margin: 0;
+    font-size: 36px;
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+header nav ul li {
+    margin: 0 20px;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* تأثير تغيير اللون عند التحويم */
+}
+header nav ul li a:hover {
+    color: #ffeb3b; /* لون أصفر جذاب عند التحويم */
+}
+/* تنسيق خانة البحث تحت الـ header */
+#search-bar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 80%; /* جعل محرك البحث أكثر اتساعًا */
+    max-width: 500px; /* حد أقصى للعرض */
+    margin-left: auto;
+    margin-right: auto;
+}
+#search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #007bff; /* حد أزرق للبحث */
+    border-radius: 25px; /* حواف دائرية لإعطاء مظهر عصري */
+    width: 85%; /* جعل مربع البحث أكثر اتساعًا */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التحويم */
+}
+#search-bar input[type="text"]:focus {
+    border-color: #ffeb3b; /* تغيير اللون إلى الأصفر عند التحديد */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.7); /* تأثير ضوء عند التركيز على مربع البحث */
+}
+#search-bar input[type="text"]::placeholder {
+    color: #bbb; /* لون النص في placeholder */
+}
+/* تنسيق للأقسام */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+/* تنسيق المنتجات */
+#products {
+    background-color: #fff;
+    padding: 20px;
+}
+/* استخدام CSS Grid لعرض منتجين في نفس السطر */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عرض منتجين في نفس السطر */
+    gap: 20px; /* المسافة بين المنتجات */
+    margin-top: 20px;
+    padding: 0px;
+}
+.product {
+    background-color: #efefef;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;  /* جعل العناصر تتراكم رأسياً */
+    justify-content: space-between; /* توزيع المحتوى بشكل متساوٍ */
+    height: 100%; /* تعيين ارتفاع المنتج ليتناسب مع العناصر داخله */
+    min-height: 400px; /* تحديد الحد الأدنى للارتفاع لضمان التوازن */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+    transform: scale(1.05); /* تأثير تكبير المنتج عند التحويم */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* تأثير الظل عند التحويم */
+}
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+.product img:hover {
+    transform: scale(1.05);  /* تكبير الصورة عند التمرير عليها */
+}
+.product h3, .product p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto;  /* تأكد من وضع الزر في أسفل المنتج */
+}
+.add-to-cart:hover {
+    background-color: #218838;
+    transform: scale(1.05);  /* تكبير الزر عند التحويم */
+}
+/* تنسيق السلة */
+#cart {
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+#cart:hover {
+    transform: scale(1.02);
+}
+#cart h2 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+#cart-table th, #cart-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+}
+#cart-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+#cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #444;
+    font-family: 'Arial', sans-serif;
+}
+#whatsapp-checkout {
+    text-align: center;
+    margin-top: 20px;
+}
+#whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    width: 90%;
+}
+#whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+#clear-cart-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+#clear-cart-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+}
+@media (max-width: 768px) {
+    #cart {
+        padding: 20px;
+    }
+    #cart h2 {
+        font-size: 22px;
+    }
+    #cart-table th, #cart-table td {
+        font-size: 18px;
+    }
+    #whatsapp-btn, #clear-cart-btn {
+        
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+/* تنسيق أيقونة السلة الثابتة */
+#cart-icon {
+    position: fixed;
+    bottom: 80px;  /* المسافة من الأسفل بحيث تكون الأيقونة فوق الفوتر */
+    right: 20px;   /* المسافة من الجهة اليمنى */
+    background-color: #28a745;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1001;  /* تأكيد ظهور الأيقونة فوق الفوتر */
+}
+#cart-icon a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cart-icon i {
+    font-size: 24px;
+}
+#cart-icon span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+/* تأثير التحويم لأيقونة السلة */
+#cart-icon:hover {
+    background-color: #218838;
+}
+/* إضافة تأثيرات حركية للأيقونة عند التحويم */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* تحسين الفوتر */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+footer p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+.footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.footer-images img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.footer-images img:hover {
+    transform: scale(1.1); /* تأثير تكبير الصورة عند التمرير عليها */
+}
+
+.product input[type="number"] {
+    width: 130px;  /* تحديد عرض مستطيل الكمية */
+    padding: 5px;  /* إضافة بعض المسافة داخل المستطيل */
+    margin: 5px 0;  /* إضافة مسافة بين حقل الكمية والعناصر الأخرى */
+    font-size: 14px;  /* تغيير حجم الخط داخل مستطيل الكمية */
+    text-align: center;  /* محاذاة النص في المنتصف */
+}

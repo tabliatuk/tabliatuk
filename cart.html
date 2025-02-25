@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السلة - متجر المواد الغذائية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>متجر المواد الغذائية</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="cart.html">السلة (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- صفحة السلة -->
+    <section id="cart">
+        <h2>السلة</h2>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>المنتج</th>
+                    <th>الكمية</th>
+                    <th>السعر</th> <!-- تعديل من "عدد الطلبات" إلى "الكمية" -->
+                    <th>الإجمالي</th>
+                    <th>الإجراء</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items-list">
+                <!-- سيتم ملء السلة بالمنتجات هنا بواسطة JavaScript -->
+            </tbody>
+        </table>
+        <p id="cart-empty-message" style="display: none;">السلة فارغة.</p>
+        <p id="cart-total">الإجمالي: 0 ريال</p>
+        <div id="whatsapp-checkout" style="display: none;">
+            <button id="whatsapp-btn">تمام الشراء عبر واتساب</button>
+        </div>
+
+        <!-- زر تفريغ السلة -->
+        <div id="clear-cart-container" style="display: none;">
+            <button id="clear-cart-btn">تفريغ السلة</button>
+        </div>
+    </section>
+
+    <script src="cart.js"></script>
+</body>
+</html>

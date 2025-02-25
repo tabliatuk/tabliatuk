@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مع تطبيق طبليتك يمكنك شراء جميع ممنتجاتك بكل سهوله واريحة">
+    <!-- اسم التطبيق -->
+    <meta name="apple-mobile-web-app-title" content="طبليتك">
+    <meta name="طبليتك" content="طبليتك">
+    <!-- تحديد أيقونة الموقع -->
+    <link rel="icon" href="img/IMG_٢٠٢٥٠٢٢٥_١١١٧٥٨_(192_x_192_pixel).png">
+    
+    <!-- للـ Android (Web App) -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="img/IMG_٢٠٢٥٠٢٢٥_١١١٧٥٨_(192_x_192_pixel).png">
+    <link rel="icon" sizes="192x192" href="img/IMG_٢٠٢٥٠٢٢٥_١١١٧٥٨_(192_x_192_pixel).png">
+    <!-- للـ iOS -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- إعدادات الشاشة -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>متجر الأمل الأكتروني</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- إضافة مكتبة أيقونات Font Awesome لأيقونة السلة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>متجر الأمل الأكتروني</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="search-bar">
+        <input type="text" id="search-input" placeholder="ابحث عن منتج...">
+    </section>
+    <section id="home">
+        <h2>أهلاً بكم في متجرنا</h2>
+        <p>نحن نقدم أفضل المواد الغذائية من مصادر موثوقة.</p>
+        <p>انضم للمجموعتنا في الواتساب عبر هذا <a href="https://chat.whatsapp.com/C1dhNeQGQ9NHn3xD1ZKrsK" target="_blank">الرابط</a>.</p>
+        <p>اذا لم تجد المنتج الذي تريده يمكنك طلبه عبر الواتساب من <a href="https://wa.me/+249119479189" target="_blank">هنا</a>.</p>
+    </section>
+    <section id="products">
+        <h2>منتجاتنا</h2>
+        <div class="product-list">
+            <div class="product" data-name="منتج 1" data-price="200">
+                <img src="product1.jpg" alt="منتج 1">
+                <h3>منتج 1</h3>
+                <p>وصف قصير للمنتج 1.</p>
+                <p>السعر: 200 جنيه</p>
+                <button class="add-to-cart" data-product="منتج 1" data-price="200">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-name="منتج 2" data-price="500">
+                <img src="product2.jpg" alt="منتج 2">
+                <h3>منتج 2</h3>
+                <p>وصف قصير للمنتج 2.</p>
+                <p>السعر: 500 جنيه</p>
+                <button class="add-to-cart" data-product="منتج 2" data-price="500">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-name="منتج 3" data-price="800">
+                <img src="product3.jpg" alt="منتج 3">
+                <h3>منتج 3</h3>
+                <p>وصف قصير للمنتج 3.</p>
+                <p>السعر: 800 جنيه</p>
+                <button class="add-to-cart" data-product="منتج 3" data-price="800">أضف إلى السلة</button>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>عن المتجر</h2>
+        <p>نحن نقدم مجموعة متنوعة من المواد الغذائية ذات الجودة العالية. هدفنا هو توفير خيارات صحية لعملائنا.</p>
+    </section>
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p>لأي استفسارات، يمكنك التواصل معنا عبر الواتساب من:<a href="https://wa.me/+249119479189" target="_blank">هنا</a></p>
+    </section>
+<!-- إضافة قسم الصور أسفل الموقع -->
+    <!-- أيقونة السلة العائمة -->
+    <div id="cart-icon">
+        <a href="cart.html">
+            <i class="fa fa-box-open"></i> <!-- أيقونة صندوق توصيل مفتوح -->
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
