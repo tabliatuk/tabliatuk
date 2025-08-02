@@ -166,12 +166,12 @@ function clearCart() {
 document.addEventListener('DOMContentLoaded', function () {
     // قائمة المنتجات
     const productList = [
-        { name: "سجائر برنجي", price: 26500, img: "img/ei_1740559551465-removebg-preview.jpg", description: "باكو سجائر برنجي يحتوي على 20 علبة" },
-        { name: "pall mall", price: 17500, img: "img/ei_1740559269656-removebg-preview.jpg", description: "باكو سجائر pall mall يحتوي على 20 علبه" },
-        { name: "tradition", price: 24500, img: "img/ei_1740559395033-removebg-preview.jpg", description: "باكو سجائر traditon يحتوي على 20 علبة" },
+        { name: "tradition", price: 42000, img: "img/ei_1740559395033-removebg-preview.jpg", description: "باكو سجائر ترادتشن متوفر" },
+        { name: "pall mall", price: 35000, img: "img/ei_1740559269656-removebg-preview.jpg", description: "باكو سجائر بال مال متوفر" },
+        { name: "سجايرld", price: "24500", img: "img/ei_1740559478067-removebg-preview.jpg", description: "باكو سجائر ال دي عادي متوفر" },
         { name: "سجائر بن", price: 17500, img: "img/ei_1740559695067-removebg-preview.jpg", description: "باكو سجائر بن يحتوي على 20 علبة" },
-        { name: "سجايرld", price: "18500", img: "img/ei_1740559478067-removebg-preview.jpg", description: "باكو سجائر ld يحتوي على 20 علبة" },
-        { name: "شبس باباي", price: "27000", img: "img/ei_1740559829995-removebg-preview.jpg", description: "كرتونة شبس باباي" },
+        
+        
       
     ];
 
@@ -197,3 +197,4 @@ document.addEventListener('DOMContentLoaded', function () {
     const clearCartButton = document.getElementById('clear-cart-btn');
     clearCartButton.addEventListener('click', clearCart);
 });
+
